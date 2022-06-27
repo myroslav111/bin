@@ -1,16 +1,16 @@
 import propTypes from 'prop-types';
 
-const CartrItem = ({ name, price, count }) => {
-  const amount = count * price;
+const CartItem = ({ item }) => {
+  const amount = item.count * item.price;
 
   return (
     <div className="cart-item">
-      <span>{name}</span>
-      <span>{price}$</span>
+      <span>{item.name}</span>
+      <span>{item.price}$</span>
 
       <div>
         <button>-</button>
-        <span>{count}</span>
+        <span>{item.count}</span>
         <button>+</button>
       </div>
 
@@ -20,10 +20,12 @@ const CartrItem = ({ name, price, count }) => {
   );
 };
 
-CartrItem.propTypes = {
-  name: propTypes.string.isRequired,
-  price: propTypes.number.isRequired,
-  count: propTypes.number.isRequired,
+CartItem.propTypes = {
+  item: propTypes.shape({
+    name: propTypes.string.isRequired,
+    price: propTypes.number.isRequired,
+    count: propTypes.number.isRequired,
+  }),
 };
 
-export default CartrItem;
+export default CartItem;
