@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/bin.git/static/css/main.7acaea2f.css",
-    "main.js": "/bin.git/static/js/main.ef88981f.js",
+    "main.js": "/bin.git/static/js/main.521ea8f1.js",
     "index.html": "/bin.git/index.html",
     "main.7acaea2f.css.map": "/bin.git/static/css/main.7acaea2f.css.map",
-    "main.ef88981f.js.map": "/bin.git/static/js/main.ef88981f.js.map"
+    "main.521ea8f1.js.map": "/bin.git/static/js/main.521ea8f1.js.map"
   },
   "entrypoints": [
     "static/css/main.7acaea2f.css",
-    "static/js/main.ef88981f.js"
+    "static/js/main.521ea8f1.js"
   ]
 }
