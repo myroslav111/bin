@@ -1,22 +1,39 @@
 import propTypes from 'prop-types';
+import {
+  CartItemWrap,
+  CartNameWrap,
+  CartCounterWrap,
+  CartCounterButton,
+  CartAmountWrap,
+  CartAmountValue,
+  CartAmountButtonDell,
+} from './CartItem.styled';
 
 const CartItem = ({ item }) => {
   const amount = item.count * item.price;
 
   return (
-    <div className="cart-item">
-      <span>{item.name}</span>
-      <span>{item.price}$</span>
+    <CartItemWrap>
+      <CartNameWrap>
+        <span>{item.name}</span>
+        <span>{item.price}$</span>
+      </CartNameWrap>
 
-      <div>
-        <button>-</button>
+      <CartCounterWrap>
+        <CartCounterButton>
+          <span>-</span>
+        </CartCounterButton>
         <span>{item.count}</span>
-        <button>+</button>
-      </div>
+        <CartCounterButton>
+          <span>+</span>
+        </CartCounterButton>
+      </CartCounterWrap>
 
-      <span>{amount}$</span>
-      <button>x</button>
-    </div>
+      <CartAmountWrap>
+        <CartAmountValue>{amount}$</CartAmountValue>
+        <CartAmountButtonDell>X</CartAmountButtonDell>
+      </CartAmountWrap>
+    </CartItemWrap>
   );
 };
 

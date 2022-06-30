@@ -1,12 +1,13 @@
 import propTypes from 'prop-types';
 import CartItem from 'components/CartItem';
+import { CartItemListWrap } from './CartItemList.styled';
 
 const CartItemList = ({ items }) => (
-  <div className="cart-item-list">
+  <CartItemListWrap>
     {items.map(item => (
       <CartItem key={item.id} item={item} />
     ))}
-  </div>
+  </CartItemListWrap>
 );
 
 CartItemList.propTypes = {
